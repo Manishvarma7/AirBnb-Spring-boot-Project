@@ -19,7 +19,8 @@ public class Room {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch =FetchType.LAZY) // if the fetchtype is EAGER then whenever u fetch
+    // the room by ID it will also fetch the hotel associated with the room without u telling it
     @JoinColumn(name = "hotel_id", nullable = false)
     private Hotel hotel;
 
