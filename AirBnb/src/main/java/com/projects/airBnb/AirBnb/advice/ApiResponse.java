@@ -8,16 +8,12 @@ import java.time.LocalDateTime;
 @Data
 public class ApiResponse<T> {
 
-
-    @JsonFormat(pattern = "hh:mm:ss dd-MM-yyyy") // mm- for minute , MM- for month 
-    private LocalDateTime timestamp;
-
+    private LocalDateTime timeStamp;
     private T data;
-
     private ApiError error;
 
     public ApiResponse() {
-        this.timestamp = LocalDateTime.now();
+        this.timeStamp = LocalDateTime.now();
     }
 
     public ApiResponse(T data) {
