@@ -2,12 +2,9 @@ package com.projects.airBnb.AirBnb.dto;
 
 
 import com.projects.airBnb.AirBnb.entities.HotelContactInfo;
-import jakarta.persistence.*;
-import lombok.Data;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDateTime;
+import lombok.Data;
+
 
 @Data // this will create all the getters and setters methods
 public class HotelDto {
